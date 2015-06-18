@@ -5,3 +5,9 @@ Dockerfile itself is overlapping layer as a pancake replace or manage and you ca
 So, one of the layers on a single pancake and make a Dockerfile like cooking sense.
 
 Please read a dockerfile_pancake.pdf
+
+# Contact
+
+Twitter: @aigamo
+
+E-mail: aigamosan@gmail.com
