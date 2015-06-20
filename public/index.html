@@ -4,16 +4,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Bootstrap -->
 <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="css/main.css" rel="stylesheet" media="screen">
+<link href="css/jquery-ui.css" rel="stylesheet" media="screen">
+
 <script src="js/lib/d3.min.js"></script>
-<script src="//code.jquery.com/jquery-1.10.2.js"></script>
-<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="js/lib/jquery-2.1.4.min.js"></script>
+<script src="js/lib/jquery-ui.min.js"></script>
+
 <script src="js/bootstrap.min.js"></script>
+<script src="js/pancakeEditor.js"></script>
 
 </head>
 <body>
 
 	<div class="container">
-		<div class="hero-unit">
+		<div class="">
 			<h1>A Dockerfile seems like a pancake?</h1>
 			<p>This service provides a editor for making it easier to
 				Dockerfile. Dockerfile itself is overlapping layer as a pancake
@@ -22,20 +27,76 @@
 				cooking sense.</p>
 		</div>
 
-
-
 	</div>
 
+
 	<div class="row-fluid">
-		<div class="span4">
-			<div id="pool_area">
-			pools
-			
+		<div class="span5 offset1">
+			<div id="sheet_container">
+				<h2>Pancake Sheets</h2>
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="container">
+							<ul class="nav">
+								<li><a href="#">FROM</a></li>
+								<li><a href="#">MAINTAINER</a></li>
+								<li><a href="#">RUN</a></li>
+								<li><a href="#">CMD</a></li>
+								<li><a href="#">LABEL</a></li>
+								<li><a href="#">EXPOSE</a></li>
+								<li><a href="#">ENV</a></li>
+								<li><a href="#">ADD</a></li>
+								<li><a href="#">COPY</a></li>
+								<li><a href="#">VOLUME</a></li>
+								<li><a href="#">ENTRYPOINT</a></li>
+							</ul>
+
+						</div>
+					</div>
+				</div>
+				<div id="sheet_area">
+					<div class="sheets">
+
+						<ul>
+							<li>FROM ubuntu:latest</li>
+							<li>FROM centos:6.5</li>
+
+							<li>FROM cantos:7</li>
+
+
+						</ul>
+
+					</div>
+				</div>
+
 			</div>
 
+			<div id="flavor_container">
+				<h2>Flavor Sheets</h2>
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="container">
+							<ul class="nav">
+								<li><a href="#">NGINX</a></li>
+								<li><a href="#">MySQL</a></li>
+								<li><a href="#">PostgreSQL</a></li>
+								<li><a href="#">Redis</a></li>
+								<li><a href="#">Apache Httpd</a></li>
+							</ul>
+
+						</div>
+					</div>
+				</div>
+				<div id="flavor_area"></div>
+
+			</div>
 		</div>
-		<div class="span8">
-			<div id="editor_area">Pancake Editor</div>
+		<div class="span6 ">
+			<div id="editor_container">
+				<h2>Pancake Editor</h2>
+				<div id="editor_area"></div>
+
+			</div>
 		</div>
 	</div>
 

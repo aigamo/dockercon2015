@@ -1,0 +1,16 @@
+#sheet_area {
+	padding: 2px;
+	border: solid 1px #888;
+}
+
+#flavor_area {
+	padding: 2px;
+	border: solid 1px #888;
+}
+
+.sheets ul>li {
+	margin: 5px;
+	padding: 3px;
+	list-style-type: none;
+	border: solid 1px #999;
+}
