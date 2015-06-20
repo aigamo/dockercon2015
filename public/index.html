@@ -5,7 +5,7 @@
 <!-- Bootstrap -->
 <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 <link href="css/main.css" rel="stylesheet" media="screen">
-<link href="css/jquery-ui.css" rel="stylesheet" media="screen">
+<link href="css/jquery-ui.min.css" rel="stylesheet" media="screen">
 
 <script src="js/lib/d3.min.js"></script>
 <script src="js/lib/jquery-2.1.4.min.js"></script>
@@ -75,7 +75,7 @@
 					<div class="navbar-inner">
 						<div class="container">
 							<ul class="nav">
-								<li><a href="#">NGINX</a></li>
+								<li id="nginx_flavor"><a href="#">NGINX</a></li>
 								<li><a href="#">MySQL</a></li>
 								<li><a href="#">PostgreSQL</a></li>
 								<li><a href="#">Redis</a></li>
@@ -85,7 +85,9 @@
 						</div>
 					</div>
 				</div>
-				<div id="flavor_area"></div>
+				<div id="flavor_area">
+				
+				</div>
 
 			</div>
 		</div>
