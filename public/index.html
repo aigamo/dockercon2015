@@ -30,7 +30,12 @@
 	</div>
 
 
+
 	<div class="row-fluid">
+		<div id="alert_area" class="span9 offset1"></div>
+	</div>
+	<div class="row-fluid">
+
 		<div class="span6">
 			<div id="sheet_container">
 				<h2>Pancake Sheets</h2>
@@ -97,51 +102,68 @@
 					Here</span>
 				<div id="editor_area" class="sheets">
 					<ul id="editor_ul" class="droptrue">
-					<li id="plate"><img src="img/plate.png" width="100%" height="30" /></li>
+						<li id="plate">PLATE AREA</li>
 					</ul>
 
 				</div>
-
-
-
-				<a class="btn btn-large btn-success" data-toggle="modal" data-target="#myModal">Apply</a>
+				<!--  <a id="clearMessage" class="btn btn-large " >ClearMessage</a>-->
+				<a class="btn btn-large btn-success" data-toggle="modal"
+					data-target="#myModal">Apply</a>
 
 			</div>
 		</div>
-		
 
 
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Dockerfile</h4>
-      </div>
-      <div class="modal-body">
-       <textarea id="dockerfile_area">
-       	FORM ubuntu:leatest
-       	hoge
-       	hoge
-       	
+
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+			aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"
+							aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel">Dockerfile</h4>
+					</div>
+					<div class="modal-body">
+						<textarea id="dockerfile_area">
+# Pull base image.
+FROM dockerfile/ubuntu
+
+# Install Nginx.
+RUN \
+  add-apt-repository -y ppa:nginx/stable && \
+  apt-get update && \
+  apt-get install -y nginx && \
+  rm -rf /var/lib/apt/lists/* && \
+  echo "\ndaemon off;" >> /etc/nginx/nginx.conf && \
+  chown -R www-data:www-data /var/lib/nginx
+
+# Define mountable directories.
+VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/var/log/nginx", "/var/www/html"]
+
+# Define working directory.
+WORKDIR /etc/nginx
+
+# Define default command.
+CMD ["nginx"]
+
+# Expose ports.
+EXPOSE 80
+EXPOSE 443
        </textarea>
-       
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Download</button>
-      </div>
-    </div>
-  </div>
-</div>
+
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Download</button>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-
-
-
-	<div id='pancake'></div>
-	<script src="js/pancake.js"></script>
-
 
 
 </body>
