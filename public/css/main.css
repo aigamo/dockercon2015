@@ -41,13 +41,23 @@
 .editor_message {
 	list-style: none;
 	list-style-position: outside;
-	font-size : 3em;
+	font-size : 1.5em;
 	margin :10px;
 	color : #888;
 	border-style : none;
 
 }
 
+#plate {
+     border: solid 1px #FFF;
+	 height :100px;
+	 background-repeat: no-repeat;
+/*	 background-image: url("../img/plate.png");*/
+}
+#plate img{
+	width:100%;
+	height :30;
+}
 .from {
 	background-color: #F5B090;
 }
