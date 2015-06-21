@@ -8,16 +8,50 @@
 	border: solid 1px #888;
 }
 
+#editor_area {
+	margin-right: 10px;
+	margin-bottom: 10px;
+	padding: 2px;
+	border: dotted 3px #888;
+	min-height:40px;
+}
+
+.editor_ul {
+	min-height:40px;	
+}
+
+.editor_ul>li {
+	margin: 5px;
+	padding: 3px;
+	list-style: none;
+	list-style-position: outside;
+	border: solid 1px #999;
+	list-style-position: outside;
+}
+
 .sheets ul>li {
 	margin: 5px;
 	padding: 3px;
-	list-style-type: none;
+	list-style: none;
+	list-style-position: outside;
 	border: solid 1px #999;
+	list-style-position: outside;
+}
+
+.editor_message {
+	list-style: none;
+	list-style-position: outside;
+	font-size : 3em;
+	margin :10px;
+	color : #888;
+	border-style : none;
+
 }
 
 .from {
 	background-color: #F5B090;
 }
+
 .run {
 	background-color: #FCD7A1;
 }
@@ -37,5 +71,3 @@
 .expose {
 	background-color: #A59ACA;
 }
-
-
