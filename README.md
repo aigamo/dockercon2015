@@ -7,7 +7,7 @@ So, one of the layers on a single pancake and make a Dockerfile like cooking sen
 Please read a dockerfile_pancake.pdf
 
 # FinalPresentation
-  DockerfilePancakeFinalPresentation.pdf
+Please check Docker-Pancake-Presentation2015.pdf
 
 # Contact
 
