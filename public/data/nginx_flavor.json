@@ -1,50 +1,48 @@
-
+{
 "nginx" : { 
-  "from": {
+  "1" : {
+ 	 "sheet_name" : "from",	
  	 "sheet_id" : "101",
  	 "image_id" : "428b411c28f0",
- 	 "value": 'FROM ubuntu:latest'
+ 	 "value": "FROM ubuntu:latest"
   },
-  "run": {
+  "2" : {
+  	 "sheet_name": "run",	
  	 "sheet_id" : "201",
  	 "image_id" : "428b411c28f0",
- 	 "value": 'RUN \
-	  add-apt-repository -y ppa:nginx/stable && \
- 	 apt-get update && \
- 	 apt-get install -y nginx && \
- 	 rm -rf /var/lib/apt/lists/* && \
- 	 echo "\ndaemon off;" >> /etc/nginx/nginx.conf && \
- 	 chown -R www-data:www-data /var/lib/nginx'
+ 	 "value": "RUN add-apt-repository -y ppa:nginx/stable && apt-get update && apt-get install -y nginx && rm -rf /var/lib/apt/lists/* && echo \"\ndaemon off;\" >> /etc/nginx/nginx.conf && chown -R www-data:www-data /var/lib/nginx"
   },
-  "volume": {
+  "3" : {
+  	"sheet_name" : "volume",
  	 "sheet_id" : "301",
  	 "image_id" : "428b411c28f0",
- 	 "value": 'VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/var/log/nginx", "/var/www/html"]'
+ 	 "value": "VOLUME [\"/etc/nginx/sites-enabled\", \"/etc/nginx/certs\", \"/etc/nginx/conf.d\", \"/var/log/nginx\", \"/var/www/html\"]"
   },
-  "workdir" : {
+  "4" : {
+    "sheet_name" : "workdir",
   	"sheet_id" : "401",
   	"image_id" : "428b411c28f0",
-  	"value": "WORKDIR /etc/nginx
-  	"
+  	"value": "WORKDIR \/etc\/nginx"
   },
-  "cmd" : {
+  "5" :  {
+  	"sheet_name" : "cmd",
   	"sheet_id" : "501",
   	"image_id" : "428b411c28f0",
-  	"value": 'CMD ["nginx"]'
-  }
-  "expose" : {
-  	"sheet_id : "601",
-  	"image_id" : "428b411c28f0",
-  	"value" : 'EXPOSE 80'
+  	"value": "CMD [\"nginx\"]"
   },
-    "expose" : {
-  	"sheet_id : "602",
+  "6" : {
+    "sheet_name" : "expose",
+  	"sheet_id" : "601",
   	"image_id" : "428b411c28f0",
-  	"value" : 'EXPOSE 80'
+  	"value" : "EXPOSE 80"
+  },
+   "7" : {
+   	"sheet_name" : "expose",
+  	"sheet_id" : "602",
+  	"image_id" : "428b411c28f0",
+  	"value" : "EXPOSE 80"
   }
-
 }
 
-
-
+}
 

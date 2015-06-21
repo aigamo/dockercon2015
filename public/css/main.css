@@ -14,3 +14,28 @@
 	list-style-type: none;
 	border: solid 1px #999;
 }
+
+.from {
+	background-color: #F5B090;
+}
+.run {
+	background-color: #FCD7A1;
+}
+
+.volume {
+	background-color: #FFF9B1;
+}
+
+.workdir {
+	background-color: #A5D4AD;
+}
+
+.cmd {
+	background-color: #A3BCE2;
+}
+
+.expose {
+	background-color: #A59ACA;
+}
+
+

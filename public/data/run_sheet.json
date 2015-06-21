@@ -1,0 +1,16 @@
+{
+"nginx" : { 
+  "1" : {
+ 	 "sheet_name" : "from",	
+ 	 "sheet_id" : "101",
+ 	 "image_id" : "428b411c28f0",
+ 	 "value": "FROM ubuntu:latest"
+  },
+  "2" : {
+  	 "sheet_name": "run",	
+ 	 "sheet_id" : "101",
+ 	 "image_id" : "428b411c28f0",
+ 	 "value": "RUN add-apt-repository -y ppa:nginx/stable && apt-get update && apt-get install -y nginx && rm -rf /var/lib/apt/lists/* && echo \"\ndaemon off;\" >> /etc/nginx/nginx.conf && chown -R www-data:www-data /var/lib/nginx"
+  }
+ }
+ }
