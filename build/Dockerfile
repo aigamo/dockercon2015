@@ -1,5 +1,5 @@
 # Pull base image.
-FROM dockerfile/ubuntu
+FROM ubuntu:14.04
 
 # Install Nginx.
 RUN \
@@ -11,9 +11,13 @@ RUN \
   chown -R www-data:www-data /var/lib/nginx
 
 RUN \
-  apt-get install git
+  add-apt-repository ppa:git-core/ppa && \
+  apt-get -y update && \
+  apt-get -y install git
   
-RUN git clone 
+RUN git clone https://github.com/aigamo/dockercon2015.git
+
+RUN cp -R dockercon2015/public/ /var/www/html/
 
 # Define mountable directories.
 VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/var/log/nginx", "/var/www/html"]
